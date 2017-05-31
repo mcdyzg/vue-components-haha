@@ -5,12 +5,16 @@ import swiper from './cm_swiper'
 import Responsive from './cm_responsive'
 // 轮播组件
 import {SwiperComponent,SlideComponent} from './cm_swiper'
+import Tabs from './cm_tabs'
+import Badge from './cm_badge'
 
 const install = (Vue) => {
 	Vue.component(Title.name, Title)
 	Vue.component(Menu1.name, Menu1)
 	Vue.component(SwiperComponent.name, SwiperComponent)
 	Vue.component(SlideComponent.name, SlideComponent)
+	Vue.component(Tabs.name, Tabs)
+	Vue.component(Badge.name, Badge)
 	Responsive()
 }
 

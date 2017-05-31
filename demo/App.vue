@@ -9,6 +9,8 @@
           <img :src="banner">
         </swiper-slide>
     </swiper>
+    <cm-tabs />
+    <cm-badge />
     <bottom-menu />
   </div>
 </template>
