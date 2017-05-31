@@ -1,6 +1,6 @@
 <template>
 	<div class="haha-badge" >
-		共四节课
+		<slot>暂无</slot>
 	</div>
 </template>
 

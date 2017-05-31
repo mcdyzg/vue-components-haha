@@ -10,7 +10,7 @@
         </swiper-slide>
     </swiper>
     <cm-tabs />
-    <cm-badge />
+    <cm-badge>共四节课</cm-badge>
     <bottom-menu />
   </div>
 </template>
