@@ -1,0 +1,38 @@
+.haha-people-container{
+	padding:1rem 1rem 1.25rem;
+	display: flex;
+	.hpc-headimg{
+		flex: 0 1 auto;
+		height:3.125rem;
+		width:3.125rem;
+		border-radius: 50%;
+	}
+	.hpc-right-content{
+		position: relative;
+		flex-grow: 1;
+		padding-left:0.75rem;
+		.hpc-name{
+			font-size: 0.875rem;
+			color:#333;
+			padding-bottom: 0.625rem;
+		}
+		.hpc-contern{
+			font-size: 0.625rem;
+			color:#999;
+			padding-bottom: 0.625rem;
+		}
+		.hpc-news{
+			font-size: 0.75rem;
+			color:#666;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			width:17.2rem;
+		}
+		.hpc-contern-btn{
+			position:absolute;
+			right:0;
+			top:0;
+		}
+	}
+}

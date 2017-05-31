@@ -7,6 +7,9 @@ import Responsive from './cm_responsive'
 import {SwiperComponent,SlideComponent} from './cm_swiper'
 import Tabs from './cm_tabs'
 import Badge from './cm_badge'
+// 人物介绍
+import Person from './mm_person'
+import Concern from './mm_concern'
 
 const install = (Vue) => {
 	Vue.component(Title.name, Title)
@@ -15,6 +18,8 @@ const install = (Vue) => {
 	Vue.component(SlideComponent.name, SlideComponent)
 	Vue.component(Tabs.name, Tabs)
 	Vue.component(Badge.name, Badge)
+	Vue.component(Person.name, Person)
+	Vue.component(Concern.name, Concern)
 	Responsive()
 }
 

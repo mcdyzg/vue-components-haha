@@ -11,6 +11,8 @@
     </swiper>
     <cm-tabs />
     <cm-badge>共四节课</cm-badge>
+    <mm-person></mm-person>
+    <mm-concern @concern='concern' :selected='false'></mm-concern>
     <bottom-menu />
   </div>
 </template>
@@ -36,6 +38,11 @@ export default {
         }
     }
   },
+  methods:{
+    concern(){
+      console.log(111)
+    }
+  }
 }
 </script>
 
