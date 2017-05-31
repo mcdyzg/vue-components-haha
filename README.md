@@ -36,3 +36,5 @@ vue组件框架，偏业务module
 ### CHANGELOG
 
 1.0.0  初版，包含menu,swiper,responsive,title模块
+1.0.1  增加badge
+1.0.2  修改badge问题

@@ -5,9 +5,8 @@
 </template>
 
 <script>
-
+import './cm_badge.scss'
 export default {
 	name:'cm-badge'
 }
 </script>
-<style scoped lang="scss" src='./cm_badge.scss'></style>

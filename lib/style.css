@@ -1,3 +1,10 @@
+.haha-badge {
+  background: #58cfc5;
+  border-radius: 3px;
+  display: inline;
+  color: #fff;
+  font-size: 0.0625rem;
+  padding: 0.125rem; }
 /**
  * Swiper 3.4.2
  * Most modern mobile touch slider and framework with hardware accelerated transitions
