@@ -13,6 +13,9 @@
     <cm-badge>共四节课</cm-badge>
     <mm-person></mm-person>
     <mm-concern @concern='concern' :selected='false'></mm-concern>
+    <div style="height: 10rem;">
+      <mm-card :data='cardData' ></mm-card>
+    </div>
     <bottom-menu />
   </div>
 </template>
@@ -35,7 +38,15 @@ export default {
           slidesPerView: 1.45,
           centeredSlides: true,
           spaceBetween: -10
-        }
+        },
+      cardData:{
+         score:8.5,
+         title:'205起',
+         cover_240x140:'https://cdn.xueyuan.xiaobao100.com/course/592e2a508d6a9f01db85556e/s_240x140.png',
+         buy_count:3478,
+         start_time:1496288890797,
+         category:'市场招生'
+      }
     }
   },
   methods:{

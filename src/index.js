@@ -10,6 +10,7 @@ import Badge from './cm_badge'
 // 人物介绍
 import Person from './mm_person'
 import Concern from './mm_concern'
+import Card from './mm_card'
 
 const install = (Vue) => {
 	Vue.component(Title.name, Title)
@@ -20,6 +21,7 @@ const install = (Vue) => {
 	Vue.component(Badge.name, Badge)
 	Vue.component(Person.name, Person)
 	Vue.component(Concern.name, Concern)
+	Vue.component(Card.name, Card)
 	Responsive()
 }
 

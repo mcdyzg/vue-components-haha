@@ -2,7 +2,7 @@
    	@return $px/750*100*2vw;
 }
 .swiper-slide{
-	height:150px;
+	height:160px;
 	overflow: hidden;
 	transition: all 0.2s;
 	transform: translate(0, -5px) scale(0.8)!important;
@@ -12,6 +12,6 @@
 }
 @supports(font-size:1vw) {
   	.swiper-slide{
-  		height:pxToVw(150);
+  		height:pxToVw(160);
   	}
 }
