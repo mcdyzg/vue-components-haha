@@ -9,13 +9,34 @@
           <img :src="banner">
         </swiper-slide>
     </swiper>
-    <cm-tabs />
+    
+    
     <cm-badge>共四节课</cm-badge>
+
     <mm-person></mm-person>
     <mm-concern @concern='concern' :selected='false'></mm-concern>
     <div style="height: 10rem;">
       <mm-card :data='cardData' ></mm-card>
     </div>
+
+    <!-- tabbar组件 -->
+    <cm-tabbar v-model='chooseTab'>
+      <cm-tabbar-item style='width:33%;'>课程介绍</cm-tabbar-item>
+      <cm-tabbar-item style='width:33%;'>课程目录</cm-tabbar-item>
+      <cm-tabbar-item style='width:33%;'>课程评价</cm-tabbar-item>
+    </cm-tabbar>
+
+    <!-- tab组件 -->
+    <button @click='chooseTab="1"'>1</button>
+    <button @click='chooseTab="2"'>2</button>
+    <button @click='chooseTab="3"'>3</button>
+    <cm-tabs-container @input='concern' :swipeable='true' v-model='chooseTab'>
+      <cm-tabs-item style='height:200px;background: red;' id='1'>111</cm-tabs-item>
+      <cm-tabs-item style='height:100px;background: red;' id='2'>222</cm-tabs-item>
+      <cm-tabs-item style='height:300px;background: red;' id='3'>333</cm-tabs-item>
+    </cm-tabs-container>
+
+
     <bottom-menu />
   </div>
 </template>
@@ -23,6 +44,7 @@
 <script>
 // 组件内可用
 // import TopTitle from '../dist'
+import './base.css'
 
 export default {
   name: 'app',
@@ -46,7 +68,8 @@ export default {
          buy_count:3478,
          start_time:1496288890797,
          category:'市场招生'
-      }
+      },
+      chooseTab:'3'
     }
   },
   methods:{

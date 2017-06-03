@@ -5,8 +5,12 @@ import swiper from './cm_swiper'
 import Responsive from './cm_responsive'
 // 轮播组件
 import {SwiperComponent,SlideComponent} from './cm_swiper'
-import Tabs from './cm_tabs'
+import TabsContainer from './cm_tabs_container'
+import TabsItem from './cm_tabs_item'
 import Badge from './cm_badge'
+// tab头部组件
+import Tabbar from './cm_tabbar'
+import TabbarItem from './cm_tabbar_item'
 // 人物介绍
 import Person from './mm_person'
 import Concern from './mm_concern'
@@ -17,11 +21,14 @@ const install = (Vue) => {
 	Vue.component(Menu1.name, Menu1)
 	Vue.component(SwiperComponent.name, SwiperComponent)
 	Vue.component(SlideComponent.name, SlideComponent)
-	Vue.component(Tabs.name, Tabs)
+	Vue.component(TabsContainer.name, TabsContainer)
+	Vue.component(TabsItem.name, TabsItem)
 	Vue.component(Badge.name, Badge)
 	Vue.component(Person.name, Person)
 	Vue.component(Concern.name, Concern)
 	Vue.component(Card.name, Card)
+	Vue.component(Tabbar.name, Tabbar)
+	Vue.component(TabbarItem.name, TabbarItem)
 	Responsive()
 }
 

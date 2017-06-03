@@ -34,6 +34,42 @@
 @supports (font-size: 1vw) {
   .swiper-slide {
     height: 42.66667vw; } }
+.haha-tabbar-container {
+  overflow: scroll;
+  width: 100%;
+  border-bottom: 1px solid #ddd; }
+  .haha-tabbar-container::-webkit-scrollbar {
+    width: 0;
+    height: 0; }
+  .haha-tabbar-container .haha-tabbar-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+.haha-tabbar-item {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #333; }
+  .haha-tabbar-item.active {
+    border-bottom: 2px solid #dc2832; }
+.haha-tabs-container {
+  overflow: hidden;
+  position: relative; }
+  .haha-tabs-container .haha-tabs-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .haha-tabs-container .haha-swipe-transition {
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s; }
+.haha-tabs-item {
+  width: 100%;
+  -ms-flex-negative: 0;
+  flex-shrink: 0; }
 .top-title{
 	font-size: 1.0rem;
 	padding:1.0rem 0 0.625rem;

@@ -1,0 +1,10 @@
+.haha-tabs-container{
+	overflow:hidden;
+	position:relative;
+	.haha-tabs-wrap{
+		display:flex;
+	}
+	.haha-swipe-transition{
+		transition:all 0.2s;
+	}
+}

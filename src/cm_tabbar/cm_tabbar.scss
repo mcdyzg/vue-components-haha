@@ -1,0 +1,12 @@
+.haha-tabbar-container{
+	overflow:scroll;
+	width:100%;
+	border-bottom:1px solid #ddd;
+	&::-webkit-scrollbar{
+		width:0;
+		height:0;
+	}
+	.haha-tabbar-wrap{
+		display: flex;
+	}
+}

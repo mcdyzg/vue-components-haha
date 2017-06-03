@@ -1,0 +1,14 @@
+.haha-tabbar-item{
+	flex:1 0 auto;
+	height: 2.5rem;
+	line-height:2.5rem;
+	// display:flex;
+	// justify-content:center;
+	// align-items:center;
+	text-align:center;
+	font-size:0.875rem;
+	color:#333;
+	&.active{
+		border-bottom: 2px solid #dc2832;
+	}
+}
