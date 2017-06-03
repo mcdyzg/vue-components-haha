@@ -44,3 +44,4 @@ vue组件框架，偏业务module
 1.0.8  修改swiper高度问题
 1.0.9  增加swiper高度
 1.0.10  增加card组件
+1.0.11  增加tabbar和tab组件
