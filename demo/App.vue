@@ -22,11 +22,14 @@
       <mm-card :data='cardData' ></mm-card>
     </div>
 
+    <!-- 评分组件 -->
+    <cm-rate :count='4' />
+
     <!-- tabbar组件 -->
     <cm-tabbar v-model='chooseTab'>
-      <cm-tabbar-item style='width:33%;'>课程介绍</cm-tabbar-item>
-      <cm-tabbar-item style='width:33%;'>课程目录</cm-tabbar-item>
-      <cm-tabbar-item style='width:33%;'>课程评价</cm-tabbar-item>
+      <cm-tabbar-item >课程介绍</cm-tabbar-item>
+      <cm-tabbar-item >课程目录</cm-tabbar-item>
+      <cm-tabbar-item >课程评价</cm-tabbar-item>
     </cm-tabbar>
 
     <!-- tab组件 -->
@@ -38,6 +41,9 @@
       <cm-tabs-item style='height:100px;background: red;' id='2'>222</cm-tabs-item>
       <cm-tabs-item style='height:300px;background: red;' id='3'>333</cm-tabs-item>
     </cm-tabs-container>
+
+
+    
 
     
     <!-- hasBuy为false时，按钮为红色，文本为立即报名；为true时，按钮蓝色，文本去听课 -->

@@ -19,6 +19,8 @@ import Card from './mm_card'
 import Toolbar from './mm_toolbar'
 // 模态框组件
 import Modal from './cm_modal'
+// 评分组件
+import Rate from './cm_rate'
 
 const install = (Vue) => {
 	Vue.component(Title.name, Title)
@@ -35,6 +37,7 @@ const install = (Vue) => {
 	Vue.component(TabbarItem.name, TabbarItem)
 	Vue.component(Toolbar.name, Toolbar)
 	Vue.component(Modal.name, Modal)
+	Vue.component(Rate.name, Rate)
 	Responsive()
 }
 
