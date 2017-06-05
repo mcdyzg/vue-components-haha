@@ -66,18 +66,18 @@ export default {
 	mounted(){
 		this.show ? this.$emit('onShow'):this.$emit('onHide')
 
-		// // 设置自动关闭的定时器
-		// if(this.show === true && this.time !== undefined && (typeof (+this.time) === 'number') ) {
-		// 	this.closedown = this.time;
-		// 	this.Interval = setInterval(()=>{
-		// 		if(this.closedown === 0) {
-		// 			this.$emit('onClose')
-		// 			clearInterval(this.Interval)
-		// 		}else {
-		// 			this.closedown--
-		// 		}
-		// 	},1000)
-		// }
+		// 设置自动关闭的定时器
+		if(this.show === true && this.time !== undefined && (typeof (+this.time) === 'number') ) {
+			this.closedown = this.time;
+			this.Interval = setInterval(()=>{
+				if(this.closedown === 0) {
+					this.$emit('onClose')
+					clearInterval(this.Interval)
+				}else {
+					this.closedown--
+				}
+			},1000)
+		}
 	},
 	updated(){
 		this.show ? this.$emit('onShow'):this.$emit('onHide')
@@ -89,7 +89,6 @@ export default {
 			if( val === true && this.time !== undefined && (typeof (+this.time) === 'number')) {
 				this.closedown = this.time;
 				this.Interval = setInterval(()=>{
-					console.log(111)
 					if(this.closedown === 0) {
 						this.$emit('onClose')
 						clearInterval(this.Interval)
