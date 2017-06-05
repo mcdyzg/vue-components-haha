@@ -47,3 +47,4 @@ vue组件框架，偏业务module
 1.0.11  增加tabbar和tab组件
 1.0.12  增加modal,toolbar。
 1.0.13  增加person组件头像问题
+1.0.14  修改modal倒计时错误

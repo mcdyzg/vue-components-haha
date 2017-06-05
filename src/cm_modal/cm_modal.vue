@@ -1,6 +1,6 @@
 <template>
 	<transition name='fade'>
-	<div class="haha-modal-wrap" v-if='show' >
+	<div class="haha-modal-wrap" v-if='showModal' >
 		<div @click='this.overlayClick' class="haha-modal-overlay" :style='overlayStyle'></div>
 		<div class="haha-modal" :style='modalStyle' >
 			<slot>
@@ -58,32 +58,56 @@ export default {
 	data () {
 		return {
 			closedown:this.time,
-			Interval:''
+			Interval:'',
+
+			showModal:this.show,
 		}
 	},
 	mounted(){
 		this.show ? this.$emit('onShow'):this.$emit('onHide')
-		// 设置自动关闭的定时器
-		if(this.closedown !== undefined && (typeof (+this.closedown) === 'number') ) {
-			this.Interval = setInterval(()=>{
-				if(this.closedown === 0) {
-					this.$emit('onClose')
-					clearInterval(this.Interval)
-				}else {
-					this.closedown--
-				}
-			},1000)
-		}
+
+		// // 设置自动关闭的定时器
+		// if(this.show === true && this.time !== undefined && (typeof (+this.time) === 'number') ) {
+		// 	this.closedown = this.time;
+		// 	this.Interval = setInterval(()=>{
+		// 		if(this.closedown === 0) {
+		// 			this.$emit('onClose')
+		// 			clearInterval(this.Interval)
+		// 		}else {
+		// 			this.closedown--
+		// 		}
+		// 	},1000)
+		// }
 	},
 	updated(){
 		this.show ? this.$emit('onShow'):this.$emit('onHide')
 	},
+	watch:{
+		show(val){
+			this.showModal = val;
+			// 设置自动关闭的定时器
+			if( val === true && this.time !== undefined && (typeof (+this.time) === 'number')) {
+				this.closedown = this.time;
+				this.Interval = setInterval(()=>{
+					console.log(111)
+					if(this.closedown === 0) {
+						this.$emit('onClose')
+						clearInterval(this.Interval)
+					}else {
+						this.closedown--
+					}
+				},1000)
+			}
+		}
+	},
 	methods: {
 		innerClose(){
+			clearInterval(this.Interval)
 			this.$emit('onClose')
 		},
 		overlayClick(){
 			if(this.overlayClose){
+				clearInterval(this.Interval)
 				this.$emit('onClose')
 			}
 		}

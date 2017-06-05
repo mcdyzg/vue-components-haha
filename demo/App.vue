@@ -45,13 +45,14 @@
       @shareClick=''
       @giftClick=''
       @inviteClick=''
-      @buyClick=''
+      @buyClick='showModal=true'
       :hasBuy='true'
      />
 
 
     <!-- 模态框组件 -->
     <cm-modal 
+      :time='3'
       :overlayClose='true'
       @onClose='closeModal'
       :show='showModal'>
@@ -96,7 +97,7 @@ export default {
       personName:'我是天天团',
       personIntro:'我是格式简介我是格式简我是格式简介我是格式简介我是格式简介我是格式简介我是格式简介我是格式简我是格式简介我是格式简介我是格式简介我是格式简介我是格式简介我是格式简介介介我是格式简介我是格式简介我是格式简介我是格式简介',
 
-      showModal:true,
+      showModal:false,
 
     }
   },
