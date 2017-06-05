@@ -203,9 +203,9 @@
   display: -ms-flexbox;
   display: flex; }
   .haha-people-container .hpc-headimg {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 0 auto;
-    flex: 1 0 auto;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
     height: 3.125rem;
     width: 3.125rem;
     border-radius: 50%; }
