@@ -1,0 +1,37 @@
+.haha-mm-toolbar{
+	height: 3.125rem;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	box-shadow: 0 2px 10px 3px #ddd;
+	display:flex;
+	background:#fff;
+	.haha-mm-toolbar-item{
+		flex:0 1 auto;
+		width: 5.0rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items:center;
+		font-size: 0.625rem;
+		color:#333;
+		&>img{
+			width: 1rem;
+			padding-bottom:0.375rem;
+		}
+	}
+	
+	.haha-mm-toolbar-btn{
+		// width:9.375rem;
+		flex-grow: 1;
+		display: flex;
+		justify-content: center;
+		align-items:center;
+		color:#fff;
+		background:#db2932;
+		font-size: 1.125rem;
+		&.hasBuy{
+			background:#5aace9;
+		}
+	}
+}

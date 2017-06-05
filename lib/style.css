@@ -5,6 +5,42 @@
   color: #fff;
   font-size: 0.0625rem;
   padding: 0.125rem; }
+.haha-modal-wrap .haha-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 998;
+  opacity: 0.7;
+  background: #333; }
+
+.haha-modal-wrap .haha-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 88%;
+  min-width: 200px;
+  max-width: 800px;
+  border-radius: 3px;
+  color: #333;
+  background: #fff;
+  z-index: 999;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  .haha-modal-wrap .haha-modal .error-text {
+    padding: 1rem;
+    font-size: 1.0rem; }
+
+.haha-modal-wrap .haha-modal-close-btn {
+  height: 3.125rem;
+  width: 3.125rem;
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  z-index: 1000; }
 /**
  * Swiper 3.4.2
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -160,15 +196,16 @@
     #my_bottom_menu dd span {
       font-size: 2.66667vw;
       padding-top: 0.8vw; } }
+@charset "UTF-8";
 .haha-people-container {
   padding: 1rem 1rem 1.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
   .haha-people-container .hpc-headimg {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
     height: 3.125rem;
     width: 3.125rem;
     border-radius: 50%; }
@@ -181,22 +218,22 @@
     .haha-people-container .hpc-right-content .hpc-name {
       font-size: 0.875rem;
       color: #333;
-      padding-bottom: 0.625rem; }
-    .haha-people-container .hpc-right-content .hpc-contern {
-      font-size: 0.625rem;
-      color: #999;
-      padding-bottom: 0.625rem; }
-    .haha-people-container .hpc-right-content .hpc-news {
+      margin-bottom: 0.2rem;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      line-height: normal; }
+    .haha-people-container .hpc-right-content .hpc-intro {
       font-size: 0.75rem;
       color: #666;
+      line-height: 1.5;
       overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      width: 17.2rem; }
-    .haha-people-container .hpc-right-content .hpc-contern-btn {
-      position: absolute;
-      right: 0;
-      top: 0; }
+      /* text-overflow: ellipsis; */
+      /* white-space: nowrap; */
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; }
 .haha-components-concern {
   width: 3.75rem;
   height: 1.375rem;
@@ -238,3 +275,55 @@
       font-size: 0.625rem;
       position: absolute;
       right: 0.9375rem; }
+.haha-mm-toolbar {
+  height: 3.125rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  -webkit-box-shadow: 0 2px 10px 3px #ddd;
+  box-shadow: 0 2px 10px 3px #ddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #fff; }
+  .haha-mm-toolbar .haha-mm-toolbar-item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: 5.0rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 0.625rem;
+    color: #333; }
+    .haha-mm-toolbar .haha-mm-toolbar-item > img {
+      width: 1rem;
+      padding-bottom: 0.375rem; }
+  .haha-mm-toolbar .haha-mm-toolbar-btn {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #fff;
+    background: #db2932;
+    font-size: 1.125rem; }
+    .haha-mm-toolbar .haha-mm-toolbar-btn.hasBuy {
+      background: #5aace9; }

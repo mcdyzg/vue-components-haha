@@ -2,7 +2,7 @@
 	padding:1rem 1rem 1.25rem;
 	display: flex;
 	.hpc-headimg{
-		flex: 0 1 auto;
+		flex: 1 0 auto;
 		height:3.125rem;
 		width:3.125rem;
 		border-radius: 50%;
@@ -14,25 +14,23 @@
 		.hpc-name{
 			font-size: 0.875rem;
 			color:#333;
-			padding-bottom: 0.625rem;
+			margin-bottom: 0.2rem;
+			overflow:hidden;
+			-webkit-box-orient:vertical;
+			display:-webkit-box;
+			-webkit-line-clamp:1;
+			line-height: normal;
 		}
-		.hpc-contern{
-			font-size: 0.625rem;
-			color:#999;
-			padding-bottom: 0.625rem;
-		}
-		.hpc-news{
+		.hpc-intro{
 			font-size: 0.75rem;
 			color:#666;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			white-space: nowrap;
-			width:17.2rem;
-		}
-		.hpc-contern-btn{
-			position:absolute;
-			right:0;
-			top:0;
+			line-height: 1.5;
+			overflow:hidden;
+			/* text-overflow: ellipsis; */
+			/* white-space: nowrap; */
+			-webkit-box-orient:vertical;
+			display:-webkit-box;
+			-webkit-line-clamp:2;
 		}
 	}
 }

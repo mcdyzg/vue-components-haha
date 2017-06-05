@@ -15,6 +15,10 @@ import TabbarItem from './cm_tabbar_item'
 import Person from './mm_person'
 import Concern from './mm_concern'
 import Card from './mm_card'
+// 课程详情页的底部工具条
+import Toolbar from './mm_toolbar'
+// 模态框组件
+import Modal from './cm_modal'
 
 const install = (Vue) => {
 	Vue.component(Title.name, Title)
@@ -29,6 +33,8 @@ const install = (Vue) => {
 	Vue.component(Card.name, Card)
 	Vue.component(Tabbar.name, Tabbar)
 	Vue.component(TabbarItem.name, TabbarItem)
+	Vue.component(Toolbar.name, Toolbar)
+	Vue.component(Modal.name, Modal)
 	Responsive()
 }
 

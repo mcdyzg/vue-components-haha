@@ -1,0 +1,36 @@
+.haha-modal-wrap .haha-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 998;
+  opacity: 0.7;
+  background: #333; }
+
+.haha-modal-wrap .haha-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 88%;
+  min-width: 200px;
+  max-width: 800px;
+  border-radius: 3px;
+  color: #333;
+  background: #fff;
+  z-index: 999;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  .haha-modal-wrap .haha-modal .error-text {
+    padding: 1rem;
+    font-size: 1.0rem; }
+
+.haha-modal-wrap .haha-modal-close-btn {
+  height: 3.125rem;
+  width: 3.125rem;
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  z-index: 1000; }

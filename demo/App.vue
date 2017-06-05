@@ -13,7 +13,10 @@
     
     <cm-badge>共四节课</cm-badge>
 
-    <mm-person></mm-person>
+    <mm-person 
+      :personIntro='personIntro'
+      :personName='personName'
+      :headimg='headimg' />
     <mm-concern @concern='concern' :selected='false'></mm-concern>
     <div style="height: 10rem;">
       <mm-card :data='cardData' ></mm-card>
@@ -36,8 +39,27 @@
       <cm-tabs-item style='height:300px;background: red;' id='3'>333</cm-tabs-item>
     </cm-tabs-container>
 
+    
+    <!-- hasBuy为false时，按钮为红色，文本为立即报名；为true时，按钮蓝色，文本去听课 -->
+    <mm-toolbar
+      @shareClick=''
+      @giftClick=''
+      @inviteClick=''
+      @buyClick=''
+      :hasBuy='true'
+     />
 
-    <bottom-menu />
+
+    <!-- 模态框组件 -->
+    <cm-modal 
+      :overlayClose='true'
+      @onClose='closeModal'
+      :show='showModal'>
+    </cm-modal>
+      
+
+    <!-- 底部导航栏 -->
+    <!-- <bottom-menu /> -->
   </div>
 </template>
 
@@ -69,12 +91,22 @@ export default {
          start_time:1496288890797,
          category:'市场招生'
       },
-      chooseTab:'3'
+      chooseTab:'3',
+      headimg:'http://p3.pstatp.com/large/213a0005a66b2a9e2fc2',
+      personName:'我是天天团',
+      personIntro:'我是格式简介我是格式简我是格式简介我是格式简介我是格式简介我是格式简介我是格式简介我是格式简我是格式简介我是格式简介我是格式简介我是格式简介我是格式简介我是格式简介介介我是格式简介我是格式简介我是格式简介我是格式简介',
+
+      showModal:true,
+
     }
   },
   methods:{
     concern(){
       console.log(111)
+    },
+    closeModal(){
+      console.log(222)
+      this.showModal = false
     }
   }
 }
