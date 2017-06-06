@@ -32,6 +32,13 @@
         duration='4' />
     </div>
    
+    <!-- 下拉列表组件 -->
+    <cm-dropdown>
+      <div slot='header'>哈哈哈</div>
+      <div slot="content">
+        dfasdfasdf
+      </div>
+    </cm-dropdown>
 
 
     <!-- tabbar组件 -->

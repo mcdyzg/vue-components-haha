@@ -23,6 +23,8 @@ import Modal from './cm_modal'
 import Rate from './cm_rate'
 // 发送验证码的倒计时组件
 import CountDown from './mm_countdown'
+// 下拉列表组件
+import DropDown from './cm_dropdown'
 
 const install = (Vue) => {
 	Vue.component(Title.name, Title)
@@ -41,6 +43,7 @@ const install = (Vue) => {
 	Vue.component(Modal.name, Modal)
 	Vue.component(Rate.name, Rate)
 	Vue.component(CountDown.name, CountDown)
+	Vue.component(DropDown.name, DropDown)
 	Responsive()
 }
 

@@ -36,12 +36,12 @@ export default {
 			this.allowClick = false;
 			this.closedown = this.duration === undefined ? 60 : +(this.duration)
 			this.Interval = setInterval(()=> {
+				this.closedown--
 				if(this.closedown === 0) {
 					clearInterval(this.Interval)
 					this.allowClick = true;
 					return;
 				}
-				this.closedown--
 			},1000)
 			this.$emit('onClick');
 		}
