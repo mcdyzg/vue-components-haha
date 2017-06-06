@@ -25,6 +25,15 @@
     <!-- 评分组件 -->
     <cm-rate :count='4' />
 
+    <!-- 发送验证码的组件 -->
+    <div style="height:2rem;width:5rem;border:1px solid #ddd;">
+      <mm-countdown 
+        @onClick='concern'
+        duration='4' />
+    </div>
+   
+
+
     <!-- tabbar组件 -->
     <cm-tabbar v-model='chooseTab'>
       <cm-tabbar-item >课程介绍</cm-tabbar-item>

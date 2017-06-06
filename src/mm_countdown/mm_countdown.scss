@@ -1,0 +1,11 @@
+.haha-countdown{
+	font-size: 0.75rem;
+	color:#999;
+	height:100%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	&.active{
+		color:#333;
+	}
+}

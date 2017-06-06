@@ -21,6 +21,8 @@ import Toolbar from './mm_toolbar'
 import Modal from './cm_modal'
 // 评分组件
 import Rate from './cm_rate'
+// 发送验证码的倒计时组件
+import CountDown from './mm_countdown'
 
 const install = (Vue) => {
 	Vue.component(Title.name, Title)
@@ -38,6 +40,7 @@ const install = (Vue) => {
 	Vue.component(Toolbar.name, Toolbar)
 	Vue.component(Modal.name, Modal)
 	Vue.component(Rate.name, Rate)
+	Vue.component(CountDown.name, CountDown)
 	Responsive()
 }
 
