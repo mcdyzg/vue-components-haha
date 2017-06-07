@@ -1,0 +1,29 @@
+.haha-swiper-container{
+	overflow:hidden;
+	position:relative;
+	.haha-swiper-wrap{
+		display:flex;
+	}
+	.haha-swipe-transition{
+		transition:all 0.2s;
+	}
+	.haha-swiper-pagination{
+		position:absolute;
+		left:50%;
+		bottom:4%;
+		transform: translateX(-50%);
+		.haha-swiper-pagination-item{
+			background: #000;
+			display: inline-block;
+			width:0.5rem;
+			height:0.5rem;
+			opacity: .4;
+			margin:0 0.25rem;
+			border-radius: 100%;
+			z-index: 1;
+			&.active{
+				background:#fff;
+			}
+		}
+	}
+}

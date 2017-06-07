@@ -141,7 +141,34 @@
 		font-size: 0.75rem;
 		color: #9494a3;
 		text-decoration: none;
-	}#my_bottom_menu {
+	}.haha-swiper-container {
+  overflow: hidden;
+  position: relative; }
+  .haha-swiper-container .haha-swiper-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .haha-swiper-container .haha-swipe-transition {
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s; }
+  .haha-swiper-container .haha-swiper-pagination {
+    position: absolute;
+    left: 50%;
+    bottom: 4%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%); }
+    .haha-swiper-container .haha-swiper-pagination .haha-swiper-pagination-item {
+      background: #000;
+      display: inline-block;
+      width: 0.5rem;
+      height: 0.5rem;
+      opacity: .4;
+      margin: 0 0.25rem;
+      border-radius: 100%;
+      z-index: 1; }
+      .haha-swiper-container .haha-swiper-pagination .haha-swiper-pagination-item.active {
+        background: #fff; }
+#my_bottom_menu {
   position: fixed;
   bottom: 0;
   -webkit-margin-before: 0;

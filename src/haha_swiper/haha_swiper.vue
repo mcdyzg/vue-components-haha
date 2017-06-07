@@ -1,64 +1,70 @@
 <template>
-<div 
-	@touchstart='startDrag'
-	@mousedown='startDrag'
-	@touchmove="onDrag"
-    @mousemove="onDrag"
-	@touchend='endDrag'
-	@mouseleave='endDrag'
-	class="haha-tabs-container">
 	<div 
-		ref='wrap'
-		class="haha-tabs-wrap">
-		<slot></slot>
+		@touchstart='startDrag'
+		@mousedown='startDrag'
+		@touchmove="onDrag"
+    	@mousemove="onDrag"
+    	@touchend='endDrag'
+		@mouseleave='endDrag'
+		class="haha-swiper-container">
+		<div 
+			ref='wrap'
+			class="haha-swiper-wrap">
+			<slot></slot>
+		</div>
+		<div v-if='pagination' class="haha-swiper-pagination">
+			<div 
+				:class='{active: currentActive===num}'
+				class="haha-swiper-pagination-item" 
+				v-for='num in childrenNum'>
+			</div>
+		</div>
 	</div>
-</div>
 </template>
 
 <script>
-import './cm_tabs_container.scss'
+import './haha_swiper.scss'
 import arrayFindIndex from 'array-find-index';
 
 export default {
-	name:'cm-tabs-container',
+	name:'haha-swiper',
 	props:{
-		value:{
-			// type:String
+		default:{
+			type:Number,
+			default:1
 		},
-		swipeable: Boolean
+		pagination:{
+			type:Boolean,
+			default:true
+		}
+	},
+	watch:{
+		currentActive(val, oldValue) {
+			// 触发组将上的input事件
+			// this.$emit('input', val);
+		    // const lastIndex = arrayFindIndex(this.$children,
+		        // item => item.id === oldValue);
+		    this.swipeLeaveTransition(+oldValue);
+		}
 	},
 	data(){
 		return {
 			start: { x: 0, y: 0 },
 		    swiping: false,
 		    pageWidth: 0,
-		    currentActive: this.value
-		}
-	},
-	watch:{
-		value(val){
-			this.currentActive = val;
-		},
-		currentActive(val, oldValue) {
-			// 触发组将上的input事件
-			this.$emit('input', val);
-		    if (!this.swipeable) return;
-		    const lastIndex = arrayFindIndex(this.$children,
-		        item => item.id === oldValue);
-		    this.swipeLeaveTransition(lastIndex);
+		    currentActive: this.default,
+		    childrenNum:0
 		}
 	},
 	mounted(){
-		if(!this.swipeable) return 
-
+		this.childrenNum = this.$children.length;
 		this.wrap = this.$refs.wrap;
     	this.pageWidth = this.wrap.clientWidth;
     	this.limitWidth = this.pageWidth / 4;
+
 	},
 	methods:{
 		startDrag(evt){
-			if (!this.swipeable) return;
-
 			evt = evt.changedTouches ? evt.changedTouches[0] : evt;
 			this.dragging = true;
 			this.start.x = evt.pageX;
@@ -72,11 +78,8 @@ export default {
 
 			if(isChange) {
 				this.index += direction
-				const child = this.$children[this.index]
-				if(child) {
-					this.currentActive = child.id
-					return
-				}
+				this.currentActive = (this.index+1)
+				return
 			}
 			this.swipeLeaveTransition()
 		},
@@ -95,7 +98,8 @@ export default {
 			evt.preventDefault();
 
 			const len = this.$children.length - 1;
-			const index = arrayFindIndex(this.$children, item => item.id === this.currentActive)
+			// const index = arrayFindIndex(this.$children, item => item.id === this.currentActive)
+			const index = +(this.currentActive)-1
 			const currentPageOffset = index * this.pageWidth;
 			const offset = offsetLeft - currentPageOffset
 			const absOffset = Math.abs(offset)
@@ -114,10 +118,10 @@ export default {
 			this.swiping = true
 		},
 		swipeLeaveTransition(lastIndex = 0) {
-			if(typeof this.index !== 'number') {
-				this.index = arrayFindIndex(this.$children,item => item.id === this.currentActive)
-				this.swipeMove(-lastIndex * this.pageWidth)
-			}
+			// if(typeof this.index !== 'number') {
+			// 	this.index = arrayFindIndex(this.$children,item => item.id === this.currentActive)
+			// 	this.swipeMove(-lastIndex * this.pageWidth)
+			// }
 			setTimeout(() => {
 				this.wrap.classList.add('haha-swipe-transition')
 				this.swipeMove(-this.index * this.pageWidth)
@@ -134,11 +138,11 @@ export default {
 			let t = this;
 		  	let listener = function() {
 		    	if (fn) {
-		    	  	fn.apply(this, arguments);
+		    	  	fn.apply(t, arguments);
 		    	}
 		    	t.off(el, event, listener);
 		  	};
-		  	this.on(el, event, listener);
+		  	t.on(el, event, listener);
 		},
 		on(elem, type, eventHandle){
 		  	if (elem == null || typeof elem === 'undefined') {
@@ -163,6 +167,15 @@ export default {
 			} else {
 			    elem['on' + type] = null;
 			}
+		},
+		next(){
+			this.currentActive = 2 ;
+		},
+		prev(){
+
+		},
+		setPage(){
+
 		}
 	}
 }

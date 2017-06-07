@@ -39,6 +39,19 @@
         dfasdfasdf
       </div>
     </cm-dropdown>
+    <br /><br />
+
+    <!-- 轮播组件 -->
+    <haha-swiper 
+      ref='hahaSwiper'
+      :pagination='true'
+      :default='2'>
+      <haha-swiper-item style='height:200px;background: red;'>111</haha-swiper-item>
+      <haha-swiper-item style='height:200px;background: red;'>222</haha-swiper-item>
+      <haha-swiper-item style='height:200px;background: red;'>333</haha-swiper-item>
+    </haha-swiper>
+    <div @click='go'>下一页</div>
+    <div @click=''>上一页</div>
 
 
     <!-- tabbar组件 -->
@@ -49,7 +62,7 @@
     </cm-tabbar>
 
     <!-- tab组件 -->
-    <button @click='chooseTab="1"'>1</button>
+    <button @click='chooseTab="2"'>1</button>
     <button @click='chooseTab="2"'>2</button>
     <button @click='chooseTab="3"'>3</button>
     <cm-tabs-container @input='concern' :swipeable='true' v-model='chooseTab'>
@@ -115,6 +128,7 @@ export default {
          category:'市场招生'
       },
       chooseTab:'3',
+      chooseTab2:3,
       headimg:'http://p3.pstatp.com/large/213a0005a66b2a9e2fc2',
       personName:'我是天天团',
       personIntro:'我是格式简介我是格式简我是格式简介我是格式简介我是格式简介我是格式简介我是格式简介我是格式简我是格式简介我是格式简介我是格式简介我是格式简介我是格式简介我是格式简介介介我是格式简介我是格式简介我是格式简介我是格式简介',
@@ -130,6 +144,9 @@ export default {
     closeModal(){
       console.log(222)
       this.showModal = false
+    },
+    go(){
+      this.$refs.hahaSwiper.next()
     }
   }
 }

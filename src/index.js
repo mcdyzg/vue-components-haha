@@ -25,6 +25,8 @@ import Rate from './cm_rate'
 import CountDown from './mm_countdown'
 // 下拉列表组件
 import DropDown from './cm_dropdown'
+// 轮播组件2.0
+import { HahaSwiper, HahaSwiperItem } from './haha_swiper'
 
 const install = (Vue) => {
 	Vue.component(Title.name, Title)
@@ -44,6 +46,9 @@ const install = (Vue) => {
 	Vue.component(Rate.name, Rate)
 	Vue.component(CountDown.name, CountDown)
 	Vue.component(DropDown.name, DropDown)
+	Vue.component(HahaSwiper.name, HahaSwiper)
+	Vue.component(HahaSwiperItem.name, HahaSwiperItem)
+	
 	Responsive()
 }
 
