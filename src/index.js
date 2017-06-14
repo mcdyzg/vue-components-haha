@@ -27,6 +27,8 @@ import CountDown from './mm_countdown'
 import DropDown from './cm_dropdown'
 // 轮播组件2.0
 import { HahaSwiper, HahaSwiperItem } from './haha_swiper'
+// Toast组件
+import Toast from './cm_toast'
 
 const install = (Vue) => {
 	Vue.component(Title.name, Title)
@@ -48,8 +50,10 @@ const install = (Vue) => {
 	Vue.component(DropDown.name, DropDown)
 	Vue.component(HahaSwiper.name, HahaSwiper)
 	Vue.component(HahaSwiperItem.name, HahaSwiperItem)
-	
+
 	Responsive()
+
+	Vue.prototype.$toast = Toast;
 }
 
 export default install

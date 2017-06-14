@@ -1,27 +1,25 @@
 <template>
-	<div v-show='$parent.swiping || $parent.currentActive === index' class="haha-swiper-item">
+	<div class="haha-swiper-item">
 		<slot />
 	</div>
 </template>
 
 <script>
 
-import arrayFindIndex from 'array-find-index';
+// import arrayFindIndex from 'array-find-index';
 
 export default {
 	name:'haha-swiper-item',
 	props:[
 	],
 	components:{
-		
+
 	},
 	computed:{
 
 	},
 	data(){
-		return {
-			index:arrayFindIndex(this.$parent.$children, item => item._uid === this._uid)+1
-		}
+		return {}
 	},
 	created(){
 	},

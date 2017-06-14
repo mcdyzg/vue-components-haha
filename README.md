@@ -10,7 +10,7 @@ vue组件框架，偏业务module
 3. npm run dev		// 运行demo
 4. open 0.0.0.0:8082
 ```
-  
+
 ### Features
 
 * vue2
@@ -55,3 +55,4 @@ vue组件框架，偏业务module
 1.0.20  增加dropdown组件，手风琴类型
 1.0.21  修改dropdown组件动画
 1.0.22  增加swiper组件，还未有自动播放，和方法api。
+1.0.23  完善swiper组件，增加toast
