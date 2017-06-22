@@ -68,8 +68,14 @@
 
 
 
-    <!-- hasBuy为false时，按钮为红色，文本为立即报名；为true时，按钮蓝色，文本去听课 -->
-    <mm-toolbar @shareClick='' @giftClick='' @inviteClick='' @buyClick='showModal=true' :hasBuy='true' />
+
+    <mm-toolbar
+        @shareClick=''
+        @giftClick=''
+        @inviteClick=''
+        background='#db2932'
+        text='听课'
+        @buyClick='showModal=true' />
 
 
     <!-- 模态框组件 -->
