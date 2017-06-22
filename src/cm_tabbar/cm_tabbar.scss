@@ -2,11 +2,16 @@
 	overflow:scroll;
 	width:100%;
 	border-bottom:1px solid #ddd;
+	background: #fff;
 	&::-webkit-scrollbar{
 		width:0;
 		height:0;
 	}
 	.haha-tabbar-wrap{
 		display: flex;
+	}
+	&.active{
+		position: fixed;
+		z-index: 1005;
 	}
 }

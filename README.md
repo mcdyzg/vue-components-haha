@@ -57,3 +57,4 @@ vue组件框架，偏业务module
 1.0.22  增加swiper组件，还未有自动播放，和方法api。
 1.0.23  完善swiper组件，增加toast
 1.0.24  修改toolbar
+1.0.25  toolbar滚动时affix

@@ -59,7 +59,7 @@
     <button @click='chooseTab="2"'>2</button>
     <button @click='chooseTab="3"'>3</button>
     <cm-tabs-container @input='concern' :swipeable='true' v-model='chooseTab'>
-        <cm-tabs-item style='height:200px;background: red;' id='1'>111</cm-tabs-item>
+        <cm-tabs-item style='height:1200px;background: red;' id='1'>111</cm-tabs-item>
         <cm-tabs-item style='height:100px;background: red;' id='2'>222</cm-tabs-item>
         <cm-tabs-item style='height:300px;background: red;' id='3'>333</cm-tabs-item>
     </cm-tabs-container>

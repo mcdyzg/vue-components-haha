@@ -1570,6 +1570,10 @@ domhandler@2.1:
   dependencies:
     domelementtype "1"
 
+domtoolkit@^1.0.1:
+  version "1.0.1"
+  resolved "http://registry.npm.taobao.org/domtoolkit/download/domtoolkit-1.0.1.tgz#684fd2f0d44294df741a879479a260547ddd5b1c"
+
 domutils@1.1:
   version "1.1.6"
   resolved "http://registry.npm.taobao.org/domutils/download/domutils-1.1.6.tgz#bddc3de099b9a2efacc51c623f28f416ecc57485"
