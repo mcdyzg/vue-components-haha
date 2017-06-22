@@ -29,6 +29,8 @@ import DropDown from './cm_dropdown'
 import { HahaSwiper, HahaSwiperItem } from './haha_swiper'
 // Toast组件
 import Toast from './cm_toast'
+// 返回顶部组件
+import BackTop from './cm_backtop'
 
 const install = (Vue) => {
 	Vue.component(Title.name, Title)
@@ -50,6 +52,7 @@ const install = (Vue) => {
 	Vue.component(DropDown.name, DropDown)
 	Vue.component(HahaSwiper.name, HahaSwiper)
 	Vue.component(HahaSwiperItem.name, HahaSwiperItem)
+	Vue.component(BackTop.name, BackTop)
 
 	Responsive()
 

@@ -403,3 +403,12 @@
   justify-content: center; }
   .haha-countdown.active {
     color: #333; }
+.haha-backToTop {
+  height: 2.81rem;
+  position: fixed;
+  width: 2.81rem;
+  background: url("https://cdn.xueyuan.xiaobao100.com/shield/image/topbtn.png") no-repeat center;
+  background-size: 100%;
+  right: 1rem;
+  bottom: 4.69rem;
+  z-index: 1010; }

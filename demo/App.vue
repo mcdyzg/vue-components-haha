@@ -68,7 +68,7 @@
 
 
 
-
+    <!-- 底部工具条 -->
     <mm-toolbar
         @shareClick=''
         @giftClick=''
@@ -81,6 +81,10 @@
     <!-- 模态框组件 -->
     <cm-modal :time='3' :overlayClose='true' @onClose='closeModal' :show='showModal'>
     </cm-modal>
+
+    <!-- 返回顶部组件 -->
+    <cm-backtop
+        @click='concern()'/>
 
 
     <!-- 底部导航栏 -->
