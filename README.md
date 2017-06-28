@@ -59,3 +59,4 @@ vue组件框架，偏业务module
 1.0.24  修改toolbar
 1.0.25  toolbar滚动时affix
 1.0.26  增加返回顶部组件
+1.0.28  修改样式

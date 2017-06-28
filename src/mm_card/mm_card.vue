@@ -4,7 +4,7 @@
 			<img class="haha-card-img" :src="data.cover_240x140 ||''">
 			<div class="haha-card-content">
 				<span>{{courseTime(data.start_time)}}</span>
-				<span class="haha-card-baoming">{{data.category || "暂无"}} | {{data.buy_count|| "暂无"}}已报名</span>
+				<span class="haha-card-baoming">{{data.category || "暂无"}} </span>
 			</div>
 		</div>
 	</a>
@@ -19,7 +19,7 @@ export default {
 		'data'
 	],
 	components:{
-		
+
 	},
 	computed:{
 
