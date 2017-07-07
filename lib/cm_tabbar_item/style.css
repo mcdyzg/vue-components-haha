@@ -6,6 +6,7 @@
   line-height: 2.5rem;
   text-align: center;
   font-size: 0.875rem;
-  color: #333; }
+  color: #666666; }
   .haha-tabbar-item.active {
+    color: #dc2832;
     border-bottom: 2px solid #dc2832; }

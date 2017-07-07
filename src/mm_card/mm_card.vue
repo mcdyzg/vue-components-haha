@@ -1,7 +1,7 @@
 <template>
 	<a :href='data.link || ""'>
 		<div class="haha-card-wrap">
-			<img class="haha-card-img" :src="data.cover_240x140 ||''">
+			<img class="haha-card-img" :src="data.cover_750x300 ||''">
 			<div class="haha-card-content">
 				<span>{{courseTime(data.start_time)}}</span>
 				<span class="haha-card-baoming">{{data.category || "暂无"}} </span>
@@ -34,7 +34,11 @@ export default {
 	methods:{
 		courseTime(time){
 			let date = new Date(time)
-			return `${date.getMonth()+1}月${date.getDate()}日 ${date.getHours()}:${date.getMinutes()}`
+			let minute = date.getMinutes();
+			if(minute.toString().length === 1) {
+				minute ='0'+minute;
+			}
+			return `${date.getMonth()+1}月${date.getDate()}日 ${date.getHours()}:${minute}`
 		}
 	}
 }

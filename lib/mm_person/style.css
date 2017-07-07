@@ -35,4 +35,6 @@
       /* white-space: nowrap; */
       -webkit-box-orient: vertical;
       display: -webkit-box;
-      -webkit-line-clamp: 2; }
+      -webkit-line-clamp: 2;
+      word-wrap: break-word;
+      word-break: break-all; }

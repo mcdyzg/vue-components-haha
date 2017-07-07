@@ -1,6 +1,7 @@
 <template>
 	<div class="haha-countdown" :class='{active:closedown===0}' @click='countdown'>
 		{{context}}
+		<slot />
 	</div>
 </template>
 
@@ -13,7 +14,7 @@ export default {
 		'duration'
 	],
 	components:{
-		
+
 	},
 	computed:{
 		context(){
@@ -30,7 +31,8 @@ export default {
 	created(){
 	},
 	methods:{
-		countdown(){
+		countdown(e){
+
 			if(!this.allowClick) return
 
 			this.allowClick = false;
@@ -43,7 +45,7 @@ export default {
 					return;
 				}
 			},1000)
-			this.$emit('onClick');
+			this.$emit('onClick',e);
 		}
 	}
 }

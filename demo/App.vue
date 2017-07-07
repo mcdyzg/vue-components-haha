@@ -8,7 +8,7 @@
     </swiper>
 
 
-    <cm-badge>共四节课</cm-badge>
+    <cm-badge >共四节课</cm-badge>
 
     <mm-person :personIntro='personIntro' :personName='personName' :headimg='headimg' />
     <mm-concern @concern='concern' :selected='false'></mm-concern>
@@ -21,7 +21,11 @@
 
     <!-- 发送验证码的组件 -->
     <div style="height:2rem;width:5rem;border:1px solid #ddd;">
-        <mm-countdown @onClick='concern' duration='4' />
+        <mm-countdown @onClick='concern' duration='4'>
+            <div
+                @click='clickCountDown'     style='position:absolute;top:0;right:0;bottom:0;left:0;'>
+            </div>
+        </mm-countdown>
     </div>
 
     <!-- 下拉列表组件 -->
@@ -33,6 +37,17 @@
     </cm-dropdown>
     <br /><br />
 
+    <!-- 滚动加载组件 -->
+    <div
+        v-infinite-scroll='loadMore'
+        infinite-scroll-distance='30'
+        infinite-scroll-disabled="loading"
+        style='height:100px;overflow:auto;background:#eee;' >
+        <div v-for='(item,index) in 30' class="">
+            {{index}}
+        </div>
+    </div>
+
     <!-- 轮播组件 -->
     <haha-swiper ref='hahaSwiper' :pagination='true' :default='1'>
         <haha-swiper-item style='height:200px;background: red;'>111</haha-swiper-item>
@@ -41,6 +56,9 @@
     </haha-swiper>
     <div @click='go'>下一页</div>
     <div @click='back'>上一页</div>
+
+
+
 
 
     <!-- Toast组件 -->
@@ -120,7 +138,7 @@ export default {
                 title: '205起',
                 cover_240x140: 'https://cdn.xueyuan.xiaobao100.com/course/592e2a508d6a9f01db85556e/s_240x140.png',
                 buy_count: 3478,
-                start_time: 1496288890797,
+                start_time: 1498564922202,
                 category: '市场招生'
             },
             chooseTab: '3',
@@ -131,10 +149,15 @@ export default {
 
             showModal: false,
 
+
+            // 无线滚动正在加载
+            loading:false
+
         }
     },
     methods: {
         concern() {
+            cm_toast('sss')
             console.log(111)
         },
         closeModal() {
@@ -146,13 +169,20 @@ export default {
         },
         back() {
             this.$refs.hahaSwiper.prev()
+        },
+
+        clickCountDown(e){
+            e.stopPropagation()
+        },
+        loadMore(){
+            console.log(11111)
         }
     },
     mounted(){
         // 全局引用
         // this.$toast('sss')
         // 局部引用
-        cm_toast('sss')
+
     }
 }
 </script>

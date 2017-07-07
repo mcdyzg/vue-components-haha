@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Toast from './cm_toast.vue'
 
+
 let ToastConstructor = Vue.extend(Toast)
 let ToastFunction = (options = {}) => {
 	if (typeof options === 'string') {
@@ -20,5 +21,7 @@ let ToastFunction = (options = {}) => {
   	instance.vm.visible = true;
 	return instance.vm;
 }
+
+Vue.prototype.$toast = ToastFunction;
 
 export default ToastFunction

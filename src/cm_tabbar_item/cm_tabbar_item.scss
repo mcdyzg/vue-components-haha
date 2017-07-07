@@ -7,8 +7,9 @@
 	// align-items:center;
 	text-align:center;
 	font-size:0.875rem;
-	color:#333;
+	color:#666666;
 	&.active{
+		color:#dc2832;
 		border-bottom: 2px solid #dc2832;
 	}
 }

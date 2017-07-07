@@ -60,3 +60,4 @@ vue组件框架，偏业务module
 1.0.25  toolbar滚动时affix
 1.0.26  增加返回顶部组件
 1.0.28  修改样式
+1.0.40  修改样式问题，增加infinitescroll组件，仿照mint-ui infinitescroll

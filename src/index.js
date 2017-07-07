@@ -31,6 +31,7 @@ import { HahaSwiper, HahaSwiperItem } from './haha_swiper'
 import Toast from './cm_toast'
 // 返回顶部组件
 import BackTop from './cm_backtop'
+import Infiniteload from './cm_infiniteload'
 
 const install = (Vue) => {
 	Vue.component(Title.name, Title)
@@ -53,10 +54,11 @@ const install = (Vue) => {
 	Vue.component(HahaSwiper.name, HahaSwiper)
 	Vue.component(HahaSwiperItem.name, HahaSwiperItem)
 	Vue.component(BackTop.name, BackTop)
+	Vue.use(Infiniteload)
 
 	Responsive()
 
-	Vue.prototype.$toast = Toast;
+	// Vue.prototype.$toast = Toast;
 }
 
 export default install
