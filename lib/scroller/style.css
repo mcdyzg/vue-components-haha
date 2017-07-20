@@ -1,0 +1,23 @@
+.haha-scroller-wrap {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+  .haha-scroller-wrap .haha-scroller-transition {
+    -webkit-transition: -webkit-transform .3s ease-out;
+    transition: -webkit-transform .3s ease-out;
+    transition: transform .3s ease-out;
+    transition: transform .3s ease-out, -webkit-transform .3s ease-out; }
+  .haha-scroller-wrap .haha-scroller-content {
+    position: relative; }
+    .haha-scroller-wrap .haha-scroller-content .haha-scroller-spin-top {
+      text-align: center;
+      padding: 6px 0;
+      position: absolute;
+      top: -46px;
+      width: 100%; }
+    .haha-scroller-wrap .haha-scroller-content .haha-scroller-spin-bottom {
+      text-align: center;
+      padding: 6px 0;
+      position: absolute;
+      bottom: -46px;
+      width: 100%; }

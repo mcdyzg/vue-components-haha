@@ -1,0 +1,28 @@
+.haha-scroller-wrap{
+    height:100%;
+    width:100%;
+    overflow: hidden;
+    .haha-scroller-transition{
+        transition: transform .3s ease-out;
+    }
+    .haha-scroller-content{
+        position: relative;
+        // -webkit-overflow-scrolling: touch;
+        .haha-scroller-spin-top{
+            text-align:center;
+            padding: 6px 0;
+            position: absolute;
+            top:-46px;
+            width:100%;
+        }
+        .haha-scroller-spin-bottom{
+            text-align:center;
+            padding: 6px 0;
+            position: absolute;
+            bottom:-46px;
+            width:100%;
+        }
+    }
+
+
+}

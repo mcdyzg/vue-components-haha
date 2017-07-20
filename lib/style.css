@@ -157,6 +157,10 @@
 		color: #9494a3;
 		text-decoration: none;
 	}
+.more-icon{
+	margin-top: -0.6rem;
+    display: inline-block;
+}
 .haha-toast {
   padding: 0.8rem 0.5rem;
   background: #333;
@@ -418,3 +422,51 @@
   position: relative; }
   .haha-countdown.active {
     color: #333; }
+.mint-loadmore {
+  overflow: hidden; }
+
+.mint-loadmore-content.is-dropped {
+  -webkit-transition: .2s;
+  transition: .2s; }
+
+.mint-loadmore-top, .mint-loadmore-bottom {
+  text-align: center;
+  height: 50px;
+  line-height: 50px; }
+
+.mint-loadmore-top {
+  margin-top: -50px; }
+
+.mint-loadmore-bottom {
+  margin-bottom: -50px; }
+
+.mint-loadmore-spinner {
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle; }
+
+.mint-loadmore-text {
+  vertical-align: middle; }
+.haha-scroller-wrap {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+  .haha-scroller-wrap .haha-scroller-transition {
+    -webkit-transition: -webkit-transform .3s ease-out;
+    transition: -webkit-transform .3s ease-out;
+    transition: transform .3s ease-out;
+    transition: transform .3s ease-out, -webkit-transform .3s ease-out; }
+  .haha-scroller-wrap .haha-scroller-content {
+    position: relative; }
+    .haha-scroller-wrap .haha-scroller-content .haha-scroller-spin-top {
+      text-align: center;
+      padding: 6px 0;
+      position: absolute;
+      top: -46px;
+      width: 100%; }
+    .haha-scroller-wrap .haha-scroller-content .haha-scroller-spin-bottom {
+      text-align: center;
+      padding: 6px 0;
+      position: absolute;
+      bottom: -46px;
+      width: 100%; }

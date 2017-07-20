@@ -61,3 +61,5 @@ vue组件框架，偏业务module
 1.0.26  增加返回顶部组件
 1.0.28  修改样式
 1.0.40  修改样式问题，增加infinitescroll组件，仿照mint-ui infinitescroll
+1.0.45  修改样式问题，增加loadmore组件，仿照mint-ui loadmore
+1.0.47  修改样式问题

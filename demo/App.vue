@@ -37,6 +37,20 @@
     </cm-dropdown>
     <br /><br />
 
+    平滑滚动组件
+    <div style='height:300px;background:#eee;'>
+        <scroller
+            ref='scroller'
+            @onRefresh="refresh"
+            @onInfinite='infinite'
+            >
+            <div v-for='item in 40'>
+                {{item}}
+            </div>
+        </scroller>
+    </div>
+    <br /><br />
+
     <!-- 滚动加载组件 -->
     <div
         v-infinite-scroll='loadMore'
@@ -56,6 +70,7 @@
     </haha-swiper>
     <div @click='go'>下一页</div>
     <div @click='back'>上一页</div>
+
 
 
 
@@ -82,6 +97,21 @@
         <cm-tabs-item style='height:300px;background: red;' id='3'>333</cm-tabs-item>
     </cm-tabs-container>
 
+
+
+    <!-- 下拉上拉刷新 -->
+    <!-- auto-fill:当内容不满时，不要自动触发bottom-load -->
+    <loadmore
+        :auto-fill='false'
+        bottomLoadingText=''
+        style='padding-bottom:100px;'
+        :bottom-method="loadBottom"
+        :bottom-all-loaded="false"
+        ref="loadmore">
+        <ul>
+            <li v-for="item in 10">222222</li>
+        </ul>
+    </loadmore>
 
 
 
@@ -176,6 +206,24 @@ export default {
         },
         loadMore(){
             console.log(11111)
+        },
+        refresh(){
+            console.log(1111)
+            setTimeout(_=>{
+                this.$refs.scroller.finishRefresh()
+            },2000)
+        },
+        infinite(){
+            console.log(2222)
+            setTimeout(_=>{
+                this.$refs.scroller.finishInfinite()
+            },2000)
+        },
+        loadBottom(){
+            console.log(123)
+            setTimeout(_=>{
+                this.$refs.loadmore.onBottomLoaded();
+            },2000)
         }
     },
     mounted(){

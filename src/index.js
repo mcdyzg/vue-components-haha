@@ -31,7 +31,12 @@ import { HahaSwiper, HahaSwiperItem } from './haha_swiper'
 import Toast from './cm_toast'
 // 返回顶部组件
 import BackTop from './cm_backtop'
-import cm_infiniteload from './cm_infiniteload'
+// import cm_infiniteload from './cm_infiniteload'
+import InfiniteLoad from './infinite-load'
+// 下拉上拉刷新组件
+import loadmore from './loadmore'
+// 平滑滚动下拉上拉刷新组件
+import scroller from './scroller'
 
 const install = (Vue) => {
 	Vue.component(Title.name, Title)
@@ -54,7 +59,10 @@ const install = (Vue) => {
 	Vue.component(HahaSwiper.name, HahaSwiper)
 	Vue.component(HahaSwiperItem.name, HahaSwiperItem)
 	Vue.component(BackTop.name, BackTop)
-	Vue.use(cm_infiniteload)
+	Vue.component(loadmore.name, loadmore)
+	Vue.component(scroller.name, scroller)
+	// Vue.use(cm_infiniteload)
+	Vue.use(InfiniteLoad)
 
 	Responsive()
 
