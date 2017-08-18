@@ -69,6 +69,21 @@
     background-size: 100%;
     background-repeat: no-repeat;
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAlCAMAAAAHvluBAAAAflBMVEUAAADcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDLcKDJj0vRAAAAAKXRSTlMACQLmnjL56m5gWg338MzHkIR+VdTQs6t6d3NEEgft2MK8o5ZoTktGGNNKwkMAAAENSURBVDjLnZTploIwDEZTSougCLIoivs2k/d/wZkDYqSly/H+LJecLl8COj+ct+AB44j8AG5m+M/MryAiZ05xhx07lzePejFylWzwxdZR8DiIx7lVLPBNYfP2KYnp3iKu8IPV9OZE2YRn+SnKc9iUgrYqkuKaRWgkyq5FIgBu6MUNFn7iAjZ+4hrY2stjAAePmpsun0Ho8sIAenK7l2svQhhfaIsahrzdpcG7g0I87cWgIqZFAV9XzO1XQ1ymxYsmckMatW5BA7+K2JrEVhtNRJYhoc4WStDyCfBcUnIUcfhSP6DjUQ//jb2gb52qpKWy6pslGIlMIuIpGS0GyQkRJVMOk1bxWyO1TofZ+wclo3X2s7HvBQAAAABJRU5ErkJggg=="); }
+.haha-star-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .haha-star-wrap .haha-star-item {
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: .7rem; }
 /**
  * Swiper 3.4.2
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -102,17 +117,37 @@
   overflow: scroll;
   width: 100%;
   border-bottom: 1px solid #ddd;
-  background: #fff; }
+  background: #fff;
+  position: relative; }
   .haha-tabbar-container::-webkit-scrollbar {
     width: 0;
     height: 0; }
   .haha-tabbar-container .haha-tabbar-wrap {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
-  .haha-tabbar-container.active {
-    position: fixed;
-    z-index: 1005; }
+    display: flex;
+    width: 100%;
+    background: #fff;
+    position: relative; }
+    .haha-tabbar-container .haha-tabbar-wrap:after {
+      content: '' !important;
+      position: absolute;
+      left: -50%;
+      width: 200%;
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transform-origin: center bottom;
+      transform-origin: center bottom;
+      bottom: 0px;
+      background: #e7e7e7;
+      height: 1px; }
+    .haha-tabbar-container .haha-tabbar-wrap.active {
+      position: fixed;
+      z-index: 1005;
+      left: 0;
+      right: 0; }
 .haha-tabbar-item {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 auto;
@@ -173,6 +208,16 @@
   -webkit-transform: translate3d(-50%, 0, 0);
   transform: translate3d(-50%, 0, 0);
   font-size: .88rem; }
+.haha-countdown2 {
+  border: 1px solid #ddd;
+  height: 2rem;
+  width: 5rem;
+  text-align: center;
+  line-height: 2rem;
+  background: yellow; }
+  .haha-countdown2.active {
+    color: #999;
+    background: #eee; }
 .haha-swiper-container {
   overflow: hidden;
   position: relative; }
@@ -354,6 +399,11 @@
       font-size: .75rem;
       position: absolute;
       right: 0.9375rem; }
+  .haha-card-wrap .haha-card-icon {
+    width: 3.25rem;
+    position: absolute;
+    left: .31rem;
+    top: .31rem; }
 .haha-mm-toolbar {
   height: 3.125rem;
   position: fixed;
@@ -452,10 +502,10 @@
   width: 100%;
   overflow: hidden; }
   .haha-scroller-wrap .haha-scroller-transition {
-    -webkit-transition: -webkit-transform .3s ease-out;
-    transition: -webkit-transform .3s ease-out;
-    transition: transform .3s ease-out;
-    transition: transform .3s ease-out, -webkit-transform .3s ease-out; }
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.17, 0.67, 0.77, 1.03);
+    transition: -webkit-transform 0.3s cubic-bezier(0.17, 0.67, 0.77, 1.03);
+    transition: transform 0.3s cubic-bezier(0.17, 0.67, 0.77, 1.03);
+    transition: transform 0.3s cubic-bezier(0.17, 0.67, 0.77, 1.03), -webkit-transform 0.3s cubic-bezier(0.17, 0.67, 0.77, 1.03); }
   .haha-scroller-wrap .haha-scroller-content {
     position: relative; }
     .haha-scroller-wrap .haha-scroller-content .haha-scroller-spin-top {

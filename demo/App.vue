@@ -7,6 +7,28 @@
         </swiper-slide>
     </swiper>
 
+    <!-- 倒计时改进版 -->
+    <countdown
+        ref='countdown'
+        :count='6'
+        normalText='发送验证码'
+        activeText='重新发送'
+        :isSending='isSending'
+        @click='sendCode'
+        >
+    </countdown
+
+
+    <br />
+    <br />
+    <!-- 评分组件 -->
+    <div style='display:flex;'>
+        <cm-star @onChangeStar='onChangeStar' :count='star' />
+    </div>
+
+    <br />
+    <br />
+
 
     <cm-badge >共四节课</cm-badge>
 
@@ -21,7 +43,7 @@
 
     <!-- 发送验证码的组件 -->
     <div style="height:2rem;width:5rem;border:1px solid #ddd;">
-        <mm-countdown @onClick='concern' duration='4'>
+        <mm-countdown ref='haha' @onClick='concern' duration='4'>
             <div
                 @click='clickCountDown'     style='position:absolute;top:0;right:0;bottom:0;left:0;'>
             </div>
@@ -83,7 +105,7 @@
     <!-- tabbar组件 -->
     <cm-tabbar v-model='chooseTab'>
         <cm-tabbar-item>课程介绍</cm-tabbar-item>
-        <cm-tabbar-item>课程目录</cm-tabbar-item>
+        <cm-tabbar-item v-show='false'>课程目录</cm-tabbar-item>
         <cm-tabbar-item>课程评价</cm-tabbar-item>
     </cm-tabbar>
 
@@ -93,9 +115,10 @@
     <button @click='chooseTab="3"'>3</button>
     <cm-tabs-container @input='concern' :swipeable='true' v-model='chooseTab'>
         <cm-tabs-item style='height:1200px;background: red;' id='1'>111</cm-tabs-item>
-        <cm-tabs-item style='height:100px;background: red;' id='2'>222</cm-tabs-item>
+        <cm-tabs-item v-if='false' style='height:100px;background: red;' id='2'>222</cm-tabs-item>
         <cm-tabs-item style='height:300px;background: red;' id='3'>333</cm-tabs-item>
     </cm-tabs-container>
+
 
 
 
@@ -109,9 +132,11 @@
         :bottom-all-loaded="false"
         ref="loadmore">
         <ul>
-            <li v-for="item in 10">222222</li>
+            <li v-for="item in 40">222222</li>
         </ul>
     </loadmore>
+
+
 
 
 
@@ -181,13 +206,44 @@ export default {
 
 
             // 无线滚动正在加载
-            loading:false
+            loading:false,
 
+            // 当前星星个数
+            star:3,
+
+            // 验证码2.0是否正处于发送状态
+            isSending:false,
         }
     },
     methods: {
+        // 发送验证码的方法
+        sendCode(){
+            // 如果格式校验通过
+            let ifPass = true;
+            if(ifPass) {
+                this.isSending = true;
+            }else{
+                alert('校验不通过')
+                this.isSending = false;
+                return;
+            }
+            // 发送验证码请求，如果返回成功，开始倒计时，如果不成功，让验证码可以点
+            let ifSuccess = true
+            setTimeout(()=>{
+                if(ifSuccess) {
+                    this.$refs.countdown.countdown(()=>{
+                        this.isSending = false;
+                    });
+                }else{
+                    this.isSending = false;
+                }
+            },1000)
+        },
         concern() {
-            cm_toast('sss')
+            cm_toast({
+                className:'sssss',
+                message:'haha'
+            })
             console.log(111)
         },
         closeModal() {
@@ -224,13 +280,21 @@ export default {
             setTimeout(_=>{
                 this.$refs.loadmore.onBottomLoaded();
             },2000)
-        }
+        },
+        onChangeStar(s){
+            console.log(s,1111111)
+            this.star = s
+        },
     },
     mounted(){
+        console.log(this.$refs.haha.countdown(),11)
         // 全局引用
         // this.$toast('sss')
         // 局部引用
 
+    },
+    updated(){
+        console.log(this.chooseTab)
     }
 }
 </script>

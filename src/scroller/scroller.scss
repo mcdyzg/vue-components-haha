@@ -3,7 +3,7 @@
     width:100%;
     overflow: hidden;
     .haha-scroller-transition{
-        transition: transform .3s ease-out;
+        transition: transform .3s cubic-bezier(.17,.67,.77,1.03);
     }
     .haha-scroller-content{
         position: relative;

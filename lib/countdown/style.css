@@ -1,0 +1,10 @@
+.haha-countdown2 {
+  border: 1px solid #ddd;
+  height: 2rem;
+  width: 5rem;
+  text-align: center;
+  line-height: 2rem;
+  background: yellow; }
+  .haha-countdown2.active {
+    color: #999;
+    background: #eee; }

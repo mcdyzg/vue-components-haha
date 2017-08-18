@@ -3,9 +3,13 @@
 		<div class="haha-card-wrap">
 			<img class="haha-card-img" :src="data.cover_750x300 ||''">
 			<div class="haha-card-content">
-				<span>{{courseTime(data.start_time)}}</span>
+				<span>{{data.start_date}}</span>
 				<span class="haha-card-baoming">{{data.category || "暂无"}} </span>
 			</div>
+			<img
+				v-if='data.live'
+				class="haha-card-icon"
+			 	src="https://cdn.xueyuan.xiaobao100.com/shield/image/zhibozhong.png">
 		</div>
 	</a>
 </template>

@@ -1,17 +1,40 @@
+@mixin border_bottom() {
+  position: relative;
+  &:after {
+    content: '' !important;
+    position: absolute;
+    left: -50%;
+    width: 200%;
+    transform: scale(.5);
+    box-sizing: border-box;
+    transform-origin: center bottom;
+
+    bottom:0px;
+    background: #e7e7e7;
+    height:1px;
+  }
+}
 .haha-tabbar-container{
 	overflow:scroll;
 	width:100%;
 	border-bottom:1px solid #ddd;
 	background: #fff;
+	position: relative;
 	&::-webkit-scrollbar{
 		width:0;
 		height:0;
 	}
 	.haha-tabbar-wrap{
 		display: flex;
+		width:100%;
+		background: #fff;
+		@include border_bottom();
+		&.active{
+			position: fixed;
+			z-index: 1005;
+			left:0;
+			right:0;
+		}
 	}
-	&.active{
-		position: fixed;
-		z-index: 1005;
-	}
+
 }

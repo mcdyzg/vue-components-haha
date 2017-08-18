@@ -2,14 +2,34 @@
   overflow: scroll;
   width: 100%;
   border-bottom: 1px solid #ddd;
-  background: #fff; }
+  background: #fff;
+  position: relative; }
   .haha-tabbar-container::-webkit-scrollbar {
     width: 0;
     height: 0; }
   .haha-tabbar-container .haha-tabbar-wrap {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
-  .haha-tabbar-container.active {
-    position: fixed;
-    z-index: 1005; }
+    display: flex;
+    width: 100%;
+    background: #fff;
+    position: relative; }
+    .haha-tabbar-container .haha-tabbar-wrap:after {
+      content: '' !important;
+      position: absolute;
+      left: -50%;
+      width: 200%;
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transform-origin: center bottom;
+      transform-origin: center bottom;
+      bottom: 0px;
+      background: #e7e7e7;
+      height: 1px; }
+    .haha-tabbar-container .haha-tabbar-wrap.active {
+      position: fixed;
+      z-index: 1005;
+      left: 0;
+      right: 0; }

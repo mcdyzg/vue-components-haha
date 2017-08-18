@@ -37,6 +37,11 @@ import InfiniteLoad from './infinite-load'
 import loadmore from './loadmore'
 // 平滑滚动下拉上拉刷新组件
 import scroller from './scroller'
+// 评分组件
+import cm_star from './cm_star'
+// 倒计时组件2.0
+import countdown from './countdown'
+
 
 const install = (Vue) => {
 	Vue.component(Title.name, Title)
@@ -61,6 +66,8 @@ const install = (Vue) => {
 	Vue.component(BackTop.name, BackTop)
 	Vue.component(loadmore.name, loadmore)
 	Vue.component(scroller.name, scroller)
+	Vue.component(cm_star.name, cm_star)
+	Vue.component(countdown.name, countdown)
 	// Vue.use(cm_infiniteload)
 	Vue.use(InfiniteLoad)
 

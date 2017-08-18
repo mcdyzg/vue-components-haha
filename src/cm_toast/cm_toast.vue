@@ -1,6 +1,6 @@
 <template>
 	<transition name='fade'>
-		<div v-if='visible' class="haha-toast">
+		<div :class='className' v-if='visible' class="haha-toast">
 			{{message}}
 		</div>
 	</transition>
@@ -24,7 +24,8 @@ export default {
 	data(){
 		return {
 			visible:false,
-			message:'请稍候重试'
+			message:'请稍候重试',
+			className:'',
 		}
 	},
 	mounted(){

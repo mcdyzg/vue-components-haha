@@ -1,20 +1,23 @@
 <template>
 	<div class="">
 		<div
-			:class='{active:fixed}'
-			:style='{top:fixed?topOffset+"px":"auto"}'
+
 			ref='haha_tabbar'
 			class="haha-tabbar-container">
-			<div ref='wrap' class="haha-tabbar-wrap">
+			<div
+				:class='{active:fixed}'
+				:style='{top:fixed?topOffset+"px":"auto"}'
+				ref='wrap'
+				class="haha-tabbar-wrap">
 				<slot></slot>
 			</div>
+			<div
+				v-if='fixed'
+				:style='{height:wrapHeight}'
+				style="width:100%;">
+			</div>
 		</div>
-		<div
-			v-if='fixed'
-			:style='{height:wrapHeight}'
-			class="haha-tabbar-container">
 
-		</div>
 	</div>
 </template>
 
@@ -59,7 +62,9 @@ export default {
 		checkScroll(){
 			const scrollTop = document.body.scrollTop;
 
-			if(scrollTop >= (this.originTop-this.topOffset)) {
+			const originTop = getOffset(this.$refs.haha_tabbar).top
+
+			if(scrollTop >= (originTop-this.topOffset)) {
 				this.fixed = true;
 			}else{
 				this.fixed = false;
@@ -70,7 +75,8 @@ export default {
 		this.$nextTick(function(){
 			this.wrapHeight = window.getComputedStyle(this.$refs.haha_tabbar,null).height
 
-			this.originTop = getOffset(this.$refs.haha_tabbar).top;
+			// this.originTop = getOffset(this.$refs.haha_tabbar).top
+			//  + 56.69*this.$refs.haha_tabbar.getBoundingClientRect().width/414;
 
 			window.addEventListener('scroll',this.checkScroll)
 		})
