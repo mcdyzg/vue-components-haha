@@ -1,6 +1,6 @@
 {
   "name": "vue-components-haha",
-  "version": "1.0.68",
+  "version": "1.0.69",
   "description": "vue组件模板",
   "main": "lib/index.js",
   "scripts": {
