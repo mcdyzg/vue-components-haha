@@ -218,6 +218,16 @@
   .haha-countdown2.active {
     color: #999;
     background: #eee; }
+.haha-fixed-head {
+  height: 45px;
+  -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1010; }
 .haha-swiper-container {
   overflow: hidden;
   position: relative; }

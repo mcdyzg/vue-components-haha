@@ -41,6 +41,9 @@ import scroller from './scroller'
 import cm_star from './cm_star'
 // 倒计时组件2.0
 import countdown from './countdown'
+// 顶部悬浮头部，页面上滑显示，下滑隐藏
+import FixedHead from './fixed_head'
+
 
 
 const install = (Vue) => {
@@ -68,6 +71,7 @@ const install = (Vue) => {
 	Vue.component(scroller.name, scroller)
 	Vue.component(cm_star.name, cm_star)
 	Vue.component(countdown.name, countdown)
+	Vue.component(FixedHead.name, FixedHead)
 	// Vue.use(cm_infiniteload)
 	Vue.use(InfiniteLoad)
 

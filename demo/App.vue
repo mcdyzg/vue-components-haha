@@ -1,5 +1,7 @@
 <template>
 <div id="app">
+    <fixed-head>我是悬浮的头部</fixed-head>
+
     <cm-title :showMore='true' moreLink='http://www.baidu.com' title='课程直播' />
     <swiper :options="swiperOption" ref="mySwiper">
         <swiper-slide :key='index' v-for="(banner,index) in bnaners">

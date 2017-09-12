@@ -64,3 +64,4 @@ vue组件框架，偏业务module
 1.0.45  修改样式问题，增加loadmore组件，仿照mint-ui loadmore
 1.0.47  修改样式问题
 1.0.69  增加倒计时2.0版本组件
+1.0.70  增加fixed-head组件，悬浮头部

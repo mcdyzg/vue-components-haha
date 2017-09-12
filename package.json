@@ -1,6 +1,6 @@
 {
   "name": "vue-components-haha",
-  "version": "1.0.69",
+  "version": "1.0.70",
   "description": "vue组件模板",
   "main": "lib/index.js",
   "scripts": {
@@ -53,6 +53,7 @@
   "dependencies": {
     "array-find-index": "^1.0.2",
     "domtoolkit": "^1.0.1",
+    "throttle-debounce": "^1.0.1",
     "vue": "^2.3.3"
   }
 }
