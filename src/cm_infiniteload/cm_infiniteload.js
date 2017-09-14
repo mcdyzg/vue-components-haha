@@ -95,7 +95,8 @@ var doBind = function() {
   var element = directive.el;
 
   directive.scrollEventTarget = getScrollEventTarget(element);
-  directive.scrollListener = throttle(doCheck.bind(directive), 200);
+  // 原来此处是200
+  directive.scrollListener = throttle(doCheck.bind(directive), 20);
   directive.scrollEventTarget.addEventListener('scroll', directive.scrollListener);
 
   var disabledExpr = element.getAttribute('infinite-scroll-disabled');

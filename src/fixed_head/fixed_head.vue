@@ -12,25 +12,18 @@ import {debounce} from 'throttle-debounce'
 
 export default {
 	name:'fixed-head',
-	props:[
-	],
-	components:{
-
-	},
-	computed:{
-
-	},
 	data(){
 		return {
 			showLogo:true,
+			lastTop:0,
 		}
 	},
 	mounted(){
-		window.onscroll = debounce(40, this.checkScroll)
+		window.onscroll = debounce(20, this.checkScroll)
 	},
 	methods:{
 		checkScroll(){
-            let nowTop = document.documentElement.scrollTop
+            let nowTop = document.documentElement.scrollTop || document.body.scrollTop
 			nowTop - this.lastTop >= 0 ? this.showLogo = true : this.showLogo = false;
             this.lastTop = nowTop
 		}

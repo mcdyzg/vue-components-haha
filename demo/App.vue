@@ -75,16 +75,7 @@
     </div>
     <br /><br />
 
-    <!-- 滚动加载组件 -->
-    <div
-        v-infinite-scroll='loadMore'
-        infinite-scroll-distance='30'
-        infinite-scroll-disabled="loading"
-        style='height:100px;overflow:auto;background:#eee;' >
-        <div v-for='(item,index) in 30' class="">
-            {{index}}
-        </div>
-    </div>
+
 
     <!-- 轮播组件 -->
     <haha-swiper ref='hahaSwiper' :pagination='true' :default='1'>
@@ -137,6 +128,28 @@
             <li v-for="item in 40">222222</li>
         </ul>
     </loadmore>
+
+
+
+
+    <!-- 滚动加载组件 -->
+    滚动加载组件
+    <div
+        v-infinite-scroll='loadMore'
+        infinite-scroll-distance='50'
+        infinite-scroll-disabled="loading"
+        style='height:500px;overflow:auto;background:#eee;' >
+        <div v-for='(item,index) in listNum' class="">
+            {{index}}
+        </div>
+    </div>
+    <br /><br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 
 
 
@@ -209,6 +222,7 @@ export default {
 
             // 无线滚动正在加载
             loading:false,
+            listNum:150,
 
             // 当前星星个数
             star:3,
@@ -263,7 +277,13 @@ export default {
             e.stopPropagation()
         },
         loadMore(){
-            console.log(11111)
+            console.log('this.loading')
+            this.loading = true;
+            setTimeout(() => {
+				// window.location.href ='#top'
+				this.listNum+=50
+				this.loading = false;
+            }, 400);
         },
         refresh(){
             console.log(1111)
