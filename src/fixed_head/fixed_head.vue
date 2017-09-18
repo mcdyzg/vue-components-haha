@@ -12,6 +12,13 @@ import {debounce} from 'throttle-debounce'
 
 export default {
 	name:'fixed-head',
+	props:{
+		// 距离顶部多少px时才会显示
+		offsetTop:{
+			type:Number,
+			default:0,
+		},
+	},
 	data(){
 		return {
 			showLogo:true,
@@ -24,7 +31,12 @@ export default {
 	methods:{
 		checkScroll(){
             let nowTop = document.documentElement.scrollTop || document.body.scrollTop
-			nowTop - this.lastTop >= 0 ? this.showLogo = true : this.showLogo = false;
+			if(nowTop - this.lastTop >= 0 && nowTop >= this.offsetTop) {
+				this.showLogo = true
+			}else{
+				this.showLogo = false;
+			}
+			// ((nowTop - this.lastTop >= 0) && (nowTop >= 0)) ? this.showLogo = true : this.showLogo = false;
             this.lastTop = nowTop
 		}
 	}

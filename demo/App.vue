@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-    <fixed-head>我是悬浮的头部</fixed-head>
+    <fixed-head :offsetTop='100'>我是悬浮的头部</fixed-head>
 
     <cm-title :showMore='true' moreLink='http://www.baidu.com' title='课程直播' />
     <swiper :options="swiperOption" ref="mySwiper">
