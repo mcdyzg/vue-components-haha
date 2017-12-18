@@ -9,8 +9,6 @@
         </swiper-slide>
     </swiper>
 
-    <img id='img-zoom-elem' src="http://p3.pstatp.com/large/213a0005a66b2a9e2fc2" alt="">
-
 
     <!-- 倒计时改进版 -->
     <countdown
@@ -318,14 +316,25 @@ export default {
         // this.$toast('sss')
         // 局部引用
 
-        this.$dialog({
-            message:'我是通知',
-            success(){
-                console.log(444)
-            },
-            cancel(){
-                console.log(555)
-            }
+        // dialog('哈哈')
+        // this.$dialog({
+        //     message:'我是通知',
+        //     success(){
+        //         console.log(444)
+        //     },
+        //     cancel(){
+        //         console.log(555)
+        //     }
+        // })
+        // this.$prompt(...)
+        // dialog.prompt(...)
+        // this.$dialog.prompt(...)
+        this.$prompt({
+            message:'',
+            placeholder:'请输入...'
+        }).then(res=>{
+            console.log(res)
+        },err=>{
         })
 
 
