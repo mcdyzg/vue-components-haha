@@ -26,15 +26,24 @@ export default {
 		}
 	},
 	mounted(){
-		window.onscroll = debounce(20, this.checkScroll)
+		window.onscroll = debounce(10, this.checkScroll)
+		// window.onscroll = this.checkScroll
 	},
 	methods:{
 		checkScroll(){
+			// 现在的滚动高度
             let nowTop = document.documentElement.scrollTop || document.body.scrollTop
-			if(nowTop - this.lastTop >= 0 && nowTop >= this.offsetTop) {
+
+			// 如果小于设置高度，默认显示
+			if(nowTop <= this.offsetTop) {
 				this.showLogo = true
+				return
+			}
+
+			if(nowTop - this.lastTop >= 0) {
+				this.showLogo = false
 			}else{
-				this.showLogo = false;
+				this.showLogo = true;
 			}
 			// ((nowTop - this.lastTop >= 0) && (nowTop >= 0)) ? this.showLogo = true : this.showLogo = false;
             this.lastTop = nowTop

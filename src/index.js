@@ -43,6 +43,8 @@ import cm_star from './cm_star'
 import countdown from './countdown'
 // 顶部悬浮头部，页面上滑显示，下滑隐藏
 import FixedHead from './fixed_head'
+// dialog组件，ios风格确认框
+import Dialog from './dialog'
 
 
 
@@ -72,6 +74,7 @@ const install = (Vue) => {
 	Vue.component(cm_star.name, cm_star)
 	Vue.component(countdown.name, countdown)
 	Vue.component(FixedHead.name, FixedHead)
+	Vue.component(Dialog.name, Dialog)
 	// Vue.use(cm_infiniteload)
 	Vue.use(InfiniteLoad)
 

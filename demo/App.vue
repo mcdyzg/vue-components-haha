@@ -185,7 +185,8 @@
 // import TopTitle from '../dist'
 import './base.css'
 import {
-    cm_toast
+    cm_toast,
+    dialog,
 } from '..'
 
 export default {
@@ -314,6 +315,15 @@ export default {
         // this.$toast('sss')
         // 局部引用
 
+        this.$dialog({
+            message:'我是通知',
+            success(){
+                console.log(444)
+            },
+            cancel(){
+                console.log(555)
+            }
+        })
     },
     updated(){
         console.log(this.chooseTab)

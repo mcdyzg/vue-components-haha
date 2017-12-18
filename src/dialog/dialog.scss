@@ -1,0 +1,85 @@
+.haha-dialog-wrap{
+    @mixin border_bottom() {
+      position: relative;
+      &:after {
+        content: '' !important;
+        position: absolute;
+        left: -50%;
+        width: 200%;
+        transform: scale(.5);
+        box-sizing: border-box;
+        transform-origin: center bottom;
+        bottom:0px;
+        background: #EBECED;
+        height:1px;
+      }
+    }
+    @mixin border_top() {
+      position: relative;
+      &:before {
+        content: '' !important;
+        position: absolute;
+        left: -50%;
+        width: 200%;
+        transform: scale(.5);
+        box-sizing: border-box;
+        transform-origin: center top;
+        top:0px;
+        background: #EBECED;
+        height:1px;
+      }
+    }
+    .border-top {
+    	@include border_top();
+    }
+    .border-bottom {
+    	@include border_bottom();
+    }
+    background-color: rgba(0,0,0,.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1020;
+    .haha-dialog-content{
+        position: fixed;
+        top: 50%;
+        left:50%;
+        z-index: 1021;
+        transform: translate3d(-50%,-50%,0);
+        font-size: .88rem;
+        background: #F9F9F9;
+        box-shadow: 0 1px 10px 0 rgba(0,0,0,0.20);
+        border-radius: 10px;
+        width: 16.88rem;
+        height:auto;
+        word-wrap: break-word;
+        word-break: break-all;
+        .haha-dialog-text{
+            padding: 1.25rem .94rem;
+            font-size: 1rem;
+            color: #282828;
+            letter-spacing: 0;
+            line-height: 1.56rem;
+            text-align: center;
+        }
+        .haha-dialog-btn-wrap{
+            border-top: 1px solid #EBECED;
+            display: flex;
+            height:2.81rem;
+            font-size: 1rem;
+            color: #007AFF;
+            letter-spacing: 0;
+            div{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex:1;
+            }
+            div:first-child{
+                border-right: 1px solid #EBECED;
+            }
+        }
+    }
+}
