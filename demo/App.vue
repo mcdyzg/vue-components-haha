@@ -9,6 +9,9 @@
         </swiper-slide>
     </swiper>
 
+    <img id='img-zoom-elem' src="http://p3.pstatp.com/large/213a0005a66b2a9e2fc2" alt="">
+
+
     <!-- 倒计时改进版 -->
     <countdown
         ref='countdown'
@@ -324,6 +327,10 @@ export default {
                 console.log(555)
             }
         })
+
+
+        // 调用图片预览,代理事件到一个元素上，元素的所有子孙img元素都会被预览
+        this.$imgZoom(document)
     },
     updated(){
         console.log(this.chooseTab)

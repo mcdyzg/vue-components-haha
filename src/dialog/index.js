@@ -22,6 +22,7 @@ let DialogFunction = (options = {}) => {
 	return instance.vm;
 }
 
+// 注册全局调用，不论是按需引用还是整体引用，都已经注册了
 Vue.prototype.$dialog = DialogFunction;
 
 export default DialogFunction

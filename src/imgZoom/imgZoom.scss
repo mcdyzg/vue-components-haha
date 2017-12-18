@@ -1,0 +1,27 @@
+.haha-img-zoom-wrap{
+    .haha-img-zoom-overlay{
+        background: #000;
+        position: fixed;
+        bottom: 0;
+        top:0;
+        right:0;
+        left:0;
+        z-index: 1023;
+        opacity: .8;
+    }
+    .haha-img-zoom-content{
+        position: fixed;
+        bottom: 0;
+        top:0;
+        right:0;
+        left:0;
+        z-index: 1024;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}

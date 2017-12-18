@@ -45,6 +45,8 @@ import countdown from './countdown'
 import FixedHead from './fixed_head'
 // dialog组件，ios风格确认框
 import Dialog from './dialog'
+//注册imgZoom组件，组件里执行了Vue.prototype.$imgZoom = imgZoomFunction;注册成全局组件
+import imgZoom from './imgZoom'
 
 
 
@@ -74,7 +76,8 @@ const install = (Vue) => {
 	Vue.component(cm_star.name, cm_star)
 	Vue.component(countdown.name, countdown)
 	Vue.component(FixedHead.name, FixedHead)
-	Vue.component(Dialog.name, Dialog)
+	// 像dialog这样的组件只能用方法调用，所以不需要注册一个组件，以下可省略，整体引用的时候只需要import Dialog from './dialog'即可，组件里自带Vue.prototype.$dialog = DialogFunction;
+	// Vue.component(Dialog.name, Dialog)
 	// Vue.use(cm_infiniteload)
 	Vue.use(InfiniteLoad)
 
