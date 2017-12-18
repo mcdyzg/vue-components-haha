@@ -23,7 +23,6 @@ import './prompt.scss'
 
 export default {
 	name:'cm-prompt',
-	props:['a'],
 	data(){
 		return {
 			visible:false,
@@ -35,9 +34,6 @@ export default {
 			// 取消按钮文本
 			cancelText: '取消',
 		}
-	},
-	mounted(){
-		console.log(this)
 	},
 	methods:{
 		sure(){
