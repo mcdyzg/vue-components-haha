@@ -331,7 +331,8 @@ export default {
         // this.$dialog.prompt(...)
         this.$prompt({
             message:'',
-            placeholder:'请输入...'
+            placeholder:'请输入...',
+            maxLength:10,
         }).then(res=>{
             console.log(res)
         },err=>{

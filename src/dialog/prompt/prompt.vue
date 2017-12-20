@@ -3,7 +3,7 @@
 		<div :class='className' v-if='visible' class="haha-dialog-wrap">
 
 			<div class="haha-dialog-content">
-				<input class='haha-dialog-input' type="text" v-model='message' :placeholder="placeholder || ''" >
+				<input :maxlength="maxLength" class='haha-dialog-input' type="text" v-model='message' :placeholder="placeholder || ''" >
 				<!-- <div class="border-top"></div> -->
 				<div class="haha-dialog-btn-wrap">
 					<div @click='close'>
@@ -33,6 +33,7 @@ export default {
 			okText: '确认',
 			// 取消按钮文本
 			cancelText: '取消',
+			maxLength:'',
 		}
 	},
 	methods:{
